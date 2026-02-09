@@ -1,0 +1,172 @@
+/* style.css */
+
+:root {
+  --yellow: #FFD700;
+  --blue: #1E90FF;
+  --light-blue: #87CEFA;
+  --green: #32CD32;
+  --red: #FF6347;
+  --duration: 10s;
+  --length: 307.9;
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f4f6f9;
+}
+
+.content-wrapper {
+  padding: 20px;
+}
+
+.content-header {
+  background-color: var(--blue);
+  padding: 10px 20px;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.alert {
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.alert h4 {
+  margin: 0;
+  margin-right: 10px;
+}
+
+.alert-success {
+  background-color: var(--green);
+  color: white;
+}
+
+.alert-danger {
+  background-color: var(--red);
+  color: white;
+}
+
+.sun {
+  position: relative;
+  top: 400px;
+  left: 50%;
+  height: 64vmin;
+  width: 64vmin;
+  border-radius: 50%;
+  background-color: var(--blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  overflow: hidden;
+}
+
+.sun:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: thats-no-moon var(--duration) infinite, night-and-day var(--duration) infinite;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.eclipse-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+}
+
+.eclipse {
+  fill: none;
+  stroke: var(--blue);
+  stroke-width: 2;
+  stroke-dasharray: var(--length) calc(var(--length) * 2);
+  stroke-dashoffset: var(--length);
+  stroke-linecap: round;
+  animation: eclipse-reveal var(--duration) cubic-bezier(.75,.02,.18,.98) infinite;
+}
+
+.icon-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.circle-icon {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  font-weight: bold;
+  transition: transform 0.3s;
+  z-index: 3;
+  pointer-events: auto; /* Ensure that pointer events are enabled */
+  
+}
+
+/* Adjust the spacing of icons around the circle */
+.circle-icon:nth-child(1) { transform: rotate(0deg) translateX(110px) rotate(0deg); }
+.circle-icon:nth-child(2) { transform: rotate(72deg) translateX(110px) rotate(-72deg); }
+.circle-icon:nth-child(3) { transform: rotate(144deg) translateX(110px) rotate(-144deg); }
+.circle-icon:nth-child(4) { transform: rotate(216deg) translateX(110px) rotate(-216deg); }
+.circle-icon:nth-child(5) { transform: rotate(288deg) translateX(110px) rotate(-288deg); }
+
+.circle-icon img {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 5px;
+}
+
+.circle-icon:hover {
+  transform: scale(1.1);
+}
+
+@keyframes thats-no-moon {
+  from, 5% {
+    transform: translateX(100%);
+  }
+  30%, 60% {
+    transform: none;
+  }
+  95%, to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes eclipse-reveal {
+  0%, 30% { stroke-dashoffset: calc(var(--length) * -1); }
+  50% { stroke-dashoffset: 0; }
+  60%, 100% { stroke-dashoffset: var(--length); }
+}
+
+@keyframes night-and-day {
+  from, 5%, 95%, to {
+    background-color: white;
+  }
+  45%, 55% {
+    background-color: #4682b4;
+  }
+}

@@ -1,0 +1,444 @@
+<!--Cards Queries-->
+<?php
+session_start();
+if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== true) {
+    header('Location: login.php');
+    exit();
+}
+
+include 'database/connection.php';
+error_reporting(0);
+
+//return the total number of customer
+$customerquery ="SELECT IFNULL(COUNT(*), 0) as total_records FROM customer";
+$result1 = $con->query($customerquery);
+
+ if($result1->num_rows>0){
+    while($row=$result1->fetch_assoc()){
+        $totalcustomer=$row["total_records"];
+    } 
+ } else{
+    $totalcustomer=0;
+ }
+
+ // return total number service manger
+$servicemanagerquery ="SELECT IFNULL(COUNT(*), 0) as total_records FROM servicemanager";
+$result2 = $con->query($servicemanagerquery);
+
+ if($result2->num_rows>0){
+    while($row=$result2->fetch_assoc()){
+        $totalservicemanager=$row["total_records"];
+    } 
+ } else{
+    $totalservicemanager=0;
+ }
+
+ //return total number of stock manager
+$servicesquery ="SELECT IFNULL(COUNT(*), 0) as total_records FROM services";
+$result3 = $con->query($servicesquery);
+
+ if($result3->num_rows>0){
+    while($row=$result3->fetch_assoc()){
+        $totalservices=$row["total_records"];
+    } 
+ } else{
+    $totalservices=0;
+ }
+// Combine counts from all tables
+$employeeCountQuery = "
+    SELECT IFNULL(SUM(total), 0) as total_employees FROM (
+        SELECT COUNT(*) as total FROM bnote_cleaner
+        UNION ALL
+        SELECT COUNT(*) as total FROM dispatchmanager
+        UNION ALL
+        SELECT COUNT(*) as total FROM driver
+        UNION ALL
+        SELECT COUNT(*) as total FROM finance
+        UNION ALL
+        SELECT COUNT(*) as total FROM inventorymanager
+        UNION ALL
+        SELECT COUNT(*) as total FROM servicemanager
+        UNION ALL
+        SELECT COUNT(*) as total FROM supervisor
+        UNION ALL
+        SELECT COUNT(*) as total FROM supplier
+    ) as combined_counts;
+";
+
+$result = $con->query($employeeCountQuery);
+
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        $totalEmployees = $row["total_employees"];
+    }
+} else {
+    $totalEmployees = 0;
+}
+
+
+//return the total number of finance manager
+$ordersquery ="SELECT IFNULL(COUNT(*), 0) as total_records FROM orders";
+$result5 = $con->query($ordersquery);
+
+ if($result5->num_rows>0){
+    while($row=$result5->fetch_assoc()){
+        $totalorders=$row["total_records"];
+    } 
+ } else{
+    $totalorders=0;
+ }
+
+//retun the total number of supervisor
+$suppliesquery ="SELECT IFNULL(COUNT(*), 0) as total_records FROM supplies";
+$result6 = $con->query($suppliesquery);
+
+ if($result6->num_rows>0){
+    while($row=$result6->fetch_assoc()){
+        $totalsupplies=$row["total_records"];
+    } 
+ } else{
+    $totalsupplies=0;
+ }
+
+//retun the total numer of fumigator
+/*$fumigatorquery ="SELECT IFNULL(COUNT(*), 0) as total_records FROM fumigator";
+$result9 = $con->query($fumigatorquery);
+
+ if($result9->num_rows>0){
+    while($row=$result9->fetch_assoc()){
+        $totalfumigator=$row["total_records"];
+    } 
+ } else{
+    $totalfumigator=0;
+ }*/
+
+
+ //retun the total number of dispatch manager
+$messagesquery ="SELECT IFNULL(COUNT(*), 0) as total_records FROM messages";
+$result7 = $con->query($messagesquery);
+
+ if($result7->num_rows>0){
+    while($row=$result7->fetch_assoc()){
+        $totalmessages=$row["total_records"];
+    } 
+ } else{
+    $totalmessages=0;
+ }
+
+
+ //retun the total number of technician
+$technicianquery ="SELECT IFNULL(COUNT(*), 0) as total_records FROM bnote_cleaner";
+$result8 = $con->query($technicianquery);
+
+ if($result8->num_rows>0){
+    while($row=$result8->fetch_assoc()){
+        $totaltechnician=$row["total_records"];
+    } 
+ } else{
+    $totaltechnician=0;
+ }
+
+ 
+
+ //retun the total number of driver
+$driverquery ="SELECT IFNULL(COUNT(*), 0) as total_records FROM driver";
+$result10 = $con->query($driverquery);
+
+ if($result10->num_rows>0){
+    while($row=$result10->fetch_assoc()){
+        $totaldriver=$row["total_records"];
+    } 
+ } else{
+    $totaldriver=0;
+ }
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Chemolex Dashboard</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper"> 
+
+        <!-- Sidebar -->
+        <?php include 'includes/sidebar.php'; ?>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column ">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Topbar Search -->
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Search for..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+
+                        
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Admin</span>
+                                <img class="img-profile rounded-circle"
+                                    src="img/undraw_profile.svg">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+                    </div>
+
+                    <!-- Content Row -->
+                    <div class="row">
+
+                        <!-- Customer Card-->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                             Customers</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $totalcustomer;?></div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fa fa-user fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Service Card -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-success shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                                Employees</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $totalEmployees;?></div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fa fa-users fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Stock Manager Card -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-warning shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                            Orders</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $totalorders; ?></div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fa fa-dollar-sign fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                         <!--Finance Manager Card -->
+                         <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                            Services</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $totalservices; ?></div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-male fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Customer Card-->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                             Messages</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $totalmessages;?></div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fa fa-envelope fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Service Card -->
+
+                        <!-- Supervisor Card -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-danger shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
+                                            Supply</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $totalsupplies; ?></div>
+                                        </div>
+                                        <div class="col-auto">
+    <i class="fa fa-book fa-2x text-gray-300"></i>
+</div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                       
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                    <span>Copyright &copy; Chemolex <?php echo date('Y'); ?></span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.php">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+
+</body>
+
+</html>

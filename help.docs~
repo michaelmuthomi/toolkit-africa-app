@@ -1,0 +1,31 @@
+ccounts (Password is the name before the @ eg joram@gmail.com Pass: joram)
+
+Finance Manager --> joram@gmail.com
+Dispatch Manager --> linda@gmail.com
+Service Manager --> paul@gmail.com
+Supervisor --> pablo@gmail.com
+inventory Manager --> liz@gmail.com
+Technician --> mary@gmail.com
+Elearning Admin --> admin Pass: admin123
+Elearning Trainer --> 12345 Pass:12345
+Elearning Student --> 6231415 Pass:6231415
+
+Accounts
+
+Finance Manager --> joram@gmail.com
+Service Manager --> paul@gmail.com
+Supervisor --> pablo@gmail.com
+inventory Manager --> liz@gmail.com
+Technician --> mary@gmail.com
+
+
+- Product Ordering Userflow
+Customer Orders product -> Finance Manager Approves Payment -> Inventory Manager Allocates to dispatch Manager -> Dispatch manager checks in the order the allocates it to a driver -> The driver logs in then starts delivery and marks it as complete -> Go back to dispatch manager and mark delivery complete -> Go to customer page and confirm delivery recieved
+
+
+- Services booking userflow
+Customer books for a services -> Finance Manager Approves the service -> Service manager logs in and allocates supervisor the service -> Login as suppervisor accept task then Allocated Recyclers for the service -> Login as the allocated worker -> Accept task -> Request for materials -> Login as inventory manager and approve tools requested -> Login to worked again and end task -> Log back in as supervisor and mark as complete -> Customer logs in again and marks as complete -> Go back to suppervisor dashboard and confirm the work is in the completed tasks
+
+
+- E-Learning userflow
+Trainee signup for training -> 
