@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-lg navbar-light topbar-sticky mb-4 static-top shadow" style="background-color: #131c04;">
   <button class="navbar-toggler" style="border: none; outline: none; display:flex; justify-content: space-between; width: 100%; align-items: center;" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-  <img src="imgs/logo.png" alt="user" style="width:30%;height:30%;">
+  <img src="imgs/toolkit-logo.png" alt="user" style="width:30%;height:30%;">
   <svg height="24" viewBox="0 0 24 24" width="24" color="white" xmlns="http://www.w3.org/2000/svg"><path d="M22,17 L22,19 L2,19 L2,17 L22,17 Z M22,11 L22,13 L2,13 L2,11 L22,11 Z M22,5 L22,7 L2,7 L2,5 L22,5 Z" fill="#fff" fill-rule="evenodd"/></svg>
   </button>
 
