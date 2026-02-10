@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
   if ($booking) {
     // Insert into supervisor_tasks
-    $query = "INSERT INTO supervisor_tasks (idnumber, fname, lname, email, phone, address, service, supervisor, status, date_allocated) VALUES (?, ?, ?, ?, ?, ?, ?, ?, 0, NOW())";
+    $query = "INSERT INTO supervisor_tasks (idnumber, fname, lname, email, phone, address, service, supervisor, status, date_allocated, cleaner_status) VALUES (?, ?, ?, ?, ?, ?, ?, ?, 0, NOW(), 0)";
     $stmt = $conn->prepare($query);
     $stmt->bind_param('ssssssss', $booking['idnumber'], $booking['fname'], $booking['lname'], $booking['email'], $booking['phone'], $booking['address'], $booking['service'], $supervisor);
     $stmt->execute();
