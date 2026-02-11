@@ -8,11 +8,11 @@
     <ul class="sidebar-menu" data-widget="tree">
       <li class="header"></li>
       <li><a href="home.php"><i class="glyphicon glyphicon-dashboard"></i> <span>Dashboard</span></a></li>
-      <li class=""><a href=" products.php"><i><span class="glyphicon glyphicon-shopping-cart"></span></i> <span>Products</span></a></li>
+      <!-- <li class=""><a href=" products.php"><i><span class="glyphicon glyphicon-shopping-cart"></span></i> <span>Products</span></a></li> -->
       <li class=""><a href=" services.php"><i><span class="glyphicon glyphicon-list"></span></i> <span>Courses</span></a></li>
       <li class=""><a href=" pay.php"><i><span class="glyphicon glyphicon-bitcoin"></span></i> <span>My Course Payments</span></a></li>
-      <li class=""><a href=" my-products.php"><i><span class="glyphicon glyphicon-barcode"></span></i><span>My Product Payments</span></a></li>
-      <li class=""><a href=" confirm-deliveries.php"><i><span class="glyphicon glyphicon-gift"></span></i><span>My Products</span></a></li>
+      <!-- <li class=""><a href=" my-products.php"><i><span class="glyphicon glyphicon-barcode"></span></i><span>My Product Payments</span></a></li>
+      <li class=""><a href=" confirm-deliveries.php"><i><span class="glyphicon glyphicon-gift"></span></i><span>My Products</span></a></li> -->
       <li class=""><a href=" my-services.php"><i><span class="glyphicon glyphicon-folder-close"></span></i><span>My Courses</span></a></li>
       <!--<li class=""><a href="timetable.php"><span class="glyphicon glyphicon-th"></span> <span>Timetable</span></a></li>
       <li class=""><a href="attendance.php"><span class="glyphicon glyphicon-th"></span> <span>Sign Attendance</span></a></li>
