@@ -80,22 +80,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="h3 mb-4 text-gray-800">
-                        <i class="fas fa-plus"></i> Add Service
+                        <i class="fas fa-plus"></i> Add Course
                         <hr>
                         <hr>
                     </h1>
                 </div>
             </div>
             
-                    <!-- Add Service Form -->
+                    <!-- Add Courses Form -->
                     <div class="row">
                         <div class="col-lg-6">
                             <?php if (isset($_GET['status']) && $_GET['status'] === 'success'): ?>
-                                <div class="alert alert-success">Services added successfully!</div>
+                                <div class="alert alert-success">Courses added successfully!</div>
                             <?php endif; ?>
                             <form action="services.php" method="post">
                                 <div class="form-group">
-                                    <label for="name">Service Name:</label>
+                                    <label for="name">Course Name:</label>
                                     <input type="text" class="form-control" id="name" name="name" required>
                                 </div>
 
@@ -109,7 +109,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     <input type="text" class="form-control" id="price" name="price"  required> 
                                 
                                 <hr>
-                                <button type="submit" class="btn btn-primary">Add Service</button>
+                                <button type="submit" class="btn btn-primary">Add Courses</button>
                                 <hr>
                             </form>
                         </div>
