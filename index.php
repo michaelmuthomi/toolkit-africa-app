@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>Chemolex</title> 
+  <title>Toolkit Africa</title> 
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -121,8 +121,8 @@
       <?php include('main_top.php'); ?>
     </div>
     <div class="main-content">
-      <div class="subtitle"><i class="fas fa-star"></i> Green - Clean - Planet</div>
-      <div class="headline">Providing impactful solutions and services for the management of plastic waste.</div>
+      <div class="subtitle"><i class="fas fa-star"></i> Skilled - Confident - Productive</div>
+      <div class="headline">A leader in powering Africa with skilled, confident, and productive youth.</div>
       <div style="width:100%;display:flex;justify-content:center;">
         <a class="get-started-btn text-center" href="users/login.php">Get Started</a>
       </div>

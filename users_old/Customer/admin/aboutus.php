@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>Chemolex</title>
+  <title>Toolkit Africa</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -75,9 +75,9 @@
         <div class="row">
             <!-- Text Column -->
             <div class="col-lg-8 mb-4">
-                <h2>Chemolex</h2>
+                <h2>Toolkit Africa</h2>
                 <p>
-                Chemolex is a sustainability leader offering impactful plastic waste management solutions and services that protects millions of people and resources that are vital to life. Building on a decade of innovation, we deliver comprehensive science-based solutions, data-driven insights, and world-class technologies and products that advance the trasnformation to clean, green and circular planet.
+                Toolkit Africa is a sustainability leader offering impactful plastic waste management solutions and services that protects millions of people and resources that are vital to life. Building on a decade of innovation, we deliver comprehensive science-based solutions, data-driven insights, and world-class technologies and products that advance the trasnformation to clean, green and circular planet.
                 </p>
             </div>
 
@@ -102,7 +102,7 @@
 
                 <h3>Our Solutions</h3>
                 <p>
-                    Our Solutions Chemolex organization has developed innovative and holistic interventions that solves the plastic pollution at every stage of the plastic life-cycle. The innovative river plastic capture devices have the capability to trap and remove all plastic wastes flowing along rivers while the novel Biopactic Material aim to directly replace the use of single-use plastic polymers in packaging, diapers, sanitary wares and fashion industries.
+                    Our Solutions Toolkit Africa organization has developed innovative and holistic interventions that solves the plastic pollution at every stage of the plastic life-cycle. The innovative river plastic capture devices have the capability to trap and remove all plastic wastes flowing along rivers while the novel Biopactic Material aim to directly replace the use of single-use plastic polymers in packaging, diapers, sanitary wares and fashion industries.
                 </p>
             </div>
         </div>

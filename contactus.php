@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="">
 <meta name="author" content="">
-<title>Chemolex</title>
+<title>Toolkit Africa</title>
 
 <!-- Bootstrap core CSS -->
 <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -69,7 +69,7 @@
             <div class="col-lg-12">
                 <div class="info-container">
                     <h1>Contact Us</h1>
-                    <p class="highlight">Chemolex</p>
+                    <p class="highlight">Toolkit Africa</p>
 
                     <h5>Address:</h5>
                     <p class="highlight">Matigari Hse, Ruaraka, Outer Ring Road Nairobi.</p>
@@ -78,7 +78,7 @@
                     <p class="highlight"><a href="tel:+254716009679">+2547 1600 9679</a></p>
 
                     <h5>Email:</h5>
-                    <p class="highlight"><a href="mailto:info@chemolex.co.ke">info@chemolex.co.ke</a></p>
+                    <p class="highlight"><a href="mailto:info@toolkitafrica.com">info@toolkitafrica.com</a></p>
 
                     <h5>Office Hours:</h5>
                     <p class="highlight">Weekdays : 8AM to 5PM</p>

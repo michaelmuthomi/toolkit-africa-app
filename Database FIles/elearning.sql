@@ -373,11 +373,11 @@ CREATE TABLE `system_info` (
 --
 
 INSERT INTO `system_info` (`id`, `meta_field`, `meta_value`) VALUES
-(1, 'name', 'Chemolex Learning '),
+(1, 'name', 'Toolkit Africa Learning '),
 (2, 'address', 'Philippines'),
 (3, 'contact', '+1234567890'),
 (4, 'email', 'info@sample.com'),
-(6, 'short_name', 'Chemolex'),
+(6, 'short_name', 'Toolkit Africa'),
 (9, 'logo', 'uploads/1630740180_elearning-logo.jpg');
 
 -- --------------------------------------------------------

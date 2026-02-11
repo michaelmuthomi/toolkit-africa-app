@@ -15,7 +15,7 @@ if (isset($_GET['supply_id'])) {
 
     if ($supply && $supply['payment_status'] == 4) {
         // Receipt HTML structure
-        $company_name = "Chemolex";  // Replace with actual company name
+        $company_name = "Toolkit Africa";  // Replace with actual company name
         $company_logo = "logo.jpg";   // Replace with actual logo path
         $company_address = "Ngong Road, Nairobi, Kenya";
         $company_phone = "+2547 87379737";

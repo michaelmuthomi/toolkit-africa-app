@@ -13,7 +13,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>Chemolex</title>
+  <title>Toolkit Africa</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -84,9 +84,9 @@
         <div class="row">
             <!-- Text Column -->
             <div class="col-lg-8 mb-4">
-                <h2 class="text-xl font-medium">Chemolex</h2>
+                <h2 class="text-xl font-medium">Toolkit Africa</h2>
                 <p>
-                    Chemolex is a sustainability leader offering impactful plastic waste management solutions and services that protect millions of people and resources vital to life. Building on a decade of innovation, we deliver comprehensive science-based solutions, data-driven insights, and world-class technologies and products that advance the transformation to a clean, green, and circular planet.
+                    Toolkit Africa is a leader in powering Africa with skilled, confident, and productive youth. We address youth unemployment through innovative skills training and prepare them for current and future labour markets.
                 </p>
             </div>
 
@@ -108,22 +108,19 @@
                     <h2 class="mb-4">Our Mission, Vision, and Core Values</h2>
                     <h4>Our Mission</h4>
                     <p>
-                        To deliver impactful plastic waste management solutions and services that protect people and vital resources, advancing the transformation to a clean, green, and circular planet through science-based innovation and world-class technologies.
+                        We transform vulnerable youth to prosperity through innovation and skills for current and future labour markets.
                     </p>
                     <h4>Our Vision</h4>
                     <p>
-                        To be a global leader in sustainability, driving the transition to a world free from plastic pollution by providing comprehensive, innovative, and holistic interventions at every stage of the plastic life-cycle.
+                        A leader in powering Africa with skilled, confident, and productive youth.
                     </p>
                     <div class="mb-4">
                         <img src="img/about2.jpeg" class="img-fluid" alt="About Us Image">
                     </div>
-                    <h4>Our Core Values</h4>
+                    <h4>Our Strategic Sectors</h4>
                     <ul>
-                        <li><strong>Innovation:</strong> We develop and implement cutting-edge solutions to address plastic pollution and promote circular economy principles.</li>
-                        <li><strong>Sustainability:</strong> We are committed to protecting the environment and advancing sustainable practices in all our operations.</li>
-                        <li><strong>Empowerment:</strong> We empower communities, especially women, to participate in and benefit from sustainable waste management businesses.</li>
-                        <li><strong>Integrity:</strong> We uphold the highest standards of ethics, transparency, and accountability in everything we do.</li>
-                        <li><strong>Impact:</strong> We strive to create measurable positive change for people, communities, and the planet.</li>
+                        <li><strong>Construction Sector:</strong> We develop youth’s character strengths alongside technical skills, balancing practical and theoretical training in construction.</li>
+                        <li><strong>Renewable Energy Sector:</strong> We focus on securing access to modern skills and techniques that enable Africa’s youth to secure decent jobs and entrepreneurship opportunities in the renewable energy value chain.</li>
                     </ul>
                 </div>
             </div>

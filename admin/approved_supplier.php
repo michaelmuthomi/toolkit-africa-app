@@ -36,7 +36,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Chemolex Dashboard</title>
+        <title>Toolkit Africa Dashboard</title>
 
         <!-- Custom fonts for this template-->
         <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -239,7 +239,7 @@ if ($result->num_rows > 0) {
                 <footer class="sticky-footer bg-white">
                     <div class="container my-auto">
                         <div class="copyright text-center my-auto">
-                            <span>Copyright &copy; Chemolex <?php echo date('Y'); ?></span>
+                            <span>Copyright &copy; Toolkit Africa <?php echo date('Y'); ?></span>
                         </div>
                     </div>
                 </footer>

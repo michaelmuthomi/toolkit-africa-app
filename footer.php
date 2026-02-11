@@ -3,18 +3,18 @@
         <hr>
         <div class="card border-success shadow h-100 py-2 module-body outer-top-xs">
             <div class="card-body">
-                <h4><font color="black">Chemolex</font></h4>
+                <h4><font color="black">Toolkit Africa</font></h4>
                 <div class="media">
                     <div class="media-body">
                         <!--<p>
                         As the financial landscape continues to evolve, the need for reliable and effective 
-                        currency restoration is paramount. At Chemolex, we understand the critical 
+                        currency restoration is paramount. At Toolkit Africa, we understand the critical 
                         importance of preserving the value of your money. 
                         Whether you are a business or an individual, our advanced solutions and expert services 
                         ensure that your defaced notes are meticulously restored to their original condition.
                         Our innovative Universal SSD Solution/Activating Powder and state-of-the-art machines 
                         guarantee superior results. We are committed to delivering exceptional service and 
-                        supporting your financial success. Trust Chemolex for all your currency 
+                        supporting your financial success. Trust Toolkit Africa for all your currency 
                         restoration needs, and experience unparalleled excellence.
                         </p>
                         <p>
@@ -91,7 +91,7 @@
         <hr>
                 
                 <div class="copyright text-center my-auto">
-                    <span>Copyright © <?php echo date('Y'); ?> Chemolex</span>
+                    <span>Copyright © <?php echo date('Y'); ?> Toolkit Africa</span>
                 </div>
     </div>
 </footer>

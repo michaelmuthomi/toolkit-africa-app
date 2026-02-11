@@ -10,7 +10,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Chemolex</title>
+    <title>Toolkit Africa</title>
 
 
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
@@ -36,7 +36,7 @@ session_start();
 
                 <h2>
                     <font color="white">
-                        <h3><b>Chemolex</b></h3></a>
+                        <h3><b>Toolkit Africa</b></h3></a>
                     </font>
                 </h2>
                 <center><img src="img/logo2.jpg" alt="user" style="width:20%;height:25%;"></center>
@@ -74,7 +74,7 @@ session_start();
                         <div class="modal-header">
                             <center>
                                 <h3></h3><b>
-                                    <font color="blue">Welcome To Chemolex</font>
+                                    <font color="blue">Welcome To Toolkit Africa</font>
                                 </b></h3>
                             </center>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span

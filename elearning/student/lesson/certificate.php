@@ -138,7 +138,7 @@ $date = date('F d, Y');
 <body>
     <div class="cert-container">
         <div class="cert-id">Certificate ID: <?= strtoupper(substr(md5($student_name.$lesson_title.$date),0,10)) ?></div>
-        <img src="https://chemolex.co.ke/wp/wp-content/uploads/2024/10/logo.jpeg" class="cert-badge" alt="Certificate Badge" />
+        <img src="https://toolkit africa.co.ke/wp/wp-content/uploads/2024/10/logo.jpeg" class="cert-badge" alt="Certificate Badge" />
         <div class="cert-title">Certificate of Completion</div>
         <div class="cert-course"><?= htmlspecialchars($lesson_title) ?></div>
         <div class="cert-name"><?= htmlspecialchars($student_name) ?></div>
@@ -146,7 +146,7 @@ $date = date('F d, Y');
         <div class="cert-footer">
             <div class="cert-sign">
                 <img src="https://img.freepik.com/premium-vector/signature-documents-white-background-hand-drawn-business-autograph-calligraphy-lettering-vector-illustration_81863-11822.jpg?ga=GA1.1.363956532.1747578705&semt=ais_hybrid&w=740" height="40" style="display:block;" alt="Signature" />
-                <div>Founders, Chemolex</div>
+                <div>Founders, Toolkit Africa</div>
             </div>
             <div class="cert-date">Issued: <?= $date ?></div>
         </div>

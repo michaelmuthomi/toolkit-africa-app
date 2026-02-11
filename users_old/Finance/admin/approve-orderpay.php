@@ -150,7 +150,7 @@ include 'includes/header.php';
     receiptWindow.document.write('<div class="receipt-container">');
     receiptWindow.document.write('<div class="company-details">');
     receiptWindow.document.write('<img src="img/logo.jpg" alt="Company Logo" class="logo">');
-    receiptWindow.document.write('<p>Chemolex</p>');
+    receiptWindow.document.write('<p>Toolkit Africa</p>');
     receiptWindow.document.write('<p>Ngong Road, Nairobi, Kenya</p>');
     receiptWindow.document.write('<p>Contact: +254787379737</p>');
     receiptWindow.document.write('</div>');

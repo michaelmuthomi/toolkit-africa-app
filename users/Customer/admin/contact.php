@@ -20,7 +20,7 @@ $query->execute();
 $lastInsertId = $dbh->lastInsertId();
 if($lastInsertId)
 {
-        $msg = "Message Sent, Thankyou for contacting Chemolex. We will respond to you soon.";
+        $msg = "Message Sent, Thankyou for contacting Toolkit Africa. We will respond to you soon.";
 }
 else 
 {

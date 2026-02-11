@@ -56,7 +56,7 @@ ob_start();
     <div class="receipt-container">
         <div class="company-details">
             <img src="../../img/logo2.jpg" alt="Company Logo" class="logo">
-            <p>Chemolex</p>
+            <p>Toolkit Africa</p>
             <p>Ngong Road, Nairobi, Kenya</p>
             <p>Contact: +254787379737</p>
         </div>

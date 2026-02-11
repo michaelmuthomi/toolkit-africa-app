@@ -14,7 +14,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Chemolex Login</title>
+    <title>Toolkit Africa Login</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -42,7 +42,7 @@
                             <div class="col-lg-12">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Chemolex Admin!</h1>
+                                        <h1 class="h4 text-gray-900 mb-4">Toolkit Africa Admin!</h1>
                                         <center><img src="img/Logo.jpg" ></center>
                                         <h1 class="h4 text-gray-900 mb-4">Login Panel</h1>
                                     </div>

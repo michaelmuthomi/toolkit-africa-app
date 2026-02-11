@@ -49,7 +49,7 @@ if (isset($_POST['orderId']) && !empty($_POST['orderId'])) {
             $order = mysqli_fetch_assoc($result);
 
             // Company Information
-            $company_name = "Chemolex.";
+            $company_name = "Toolkit Africa.";
             $company_logo = "img/logo.jpg"; // Update with the path to your logo image
             $company_address = "Ngong Road, Nairobi, Kenya";
             $company_phone = "+2547 87379737"; // Update with your company's phone number

@@ -61,7 +61,7 @@
 
         <ol class="breadcrumb" style="background-color:blue;">
             <li class="breadcrumb-item">
-            <center>About Chemolex</center>
+            <center>About Toolkit Africa</center>
             </li>
           
         </ol>
@@ -71,9 +71,9 @@
         <div class="row">
             <!-- Text Column -->
             <div class="col-lg-8 mb-4">
-                <h2 class="text-xl font-medium">Chemolex</h2>
+                <h2 class="text-xl font-medium">Toolkit Africa</h2>
                 <p>
-                    Chemolex is a sustainability leader offering impactful plastic waste management solutions and services that protect millions of people and resources vital to life. Building on a decade of innovation, we deliver comprehensive science-based solutions, data-driven insights, and world-class technologies and products that advance the transformation to a clean, green, and circular planet.
+                    Toolkit Africa is a sustainability leader offering impactful plastic waste management solutions and services that protect millions of people and resources vital to life. Building on a decade of innovation, we deliver comprehensive science-based solutions, data-driven insights, and world-class technologies and products that advance the transformation to a clean, green, and circular planet.
                 </p>
             </div>
 

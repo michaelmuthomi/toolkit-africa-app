@@ -19,7 +19,7 @@ if (!isset($_SESSION['admin'])) {
 <hr>
 <center>
     <div class="container">
-        <b><h4>Chemolex</h4></b>
+        <b><h4>Toolkit Africa</h4></b>
         <center><img src="img/Logo.jpg" alt="user" style="width:10%;height:25%;"></center>
         <b>ADDRESS</b></br>Ngong Road, Nairobi, Kenya
         </br>

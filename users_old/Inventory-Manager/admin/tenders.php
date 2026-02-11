@@ -152,7 +152,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['action']) && $_POST['a
             <label class="form-control-label">Select Tool<span class="text-danger ml-2">*</span></label>
             <?php
             // Database connection
-            $conn = new mysqli('localhost', 'root', '', 'chemolex_db');
+            $conn = new mysqli('localhost', 'root', '', 'toolkit africa_db');
             if ($conn->connect_error) {
                 die("Connection failed: " . $conn->connect_error);
             }

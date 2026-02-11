@@ -20,7 +20,7 @@
         <!-- Right navbar links -->
         <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
           <li class="nav-item container nav-link">
-            <a href="<?php echo home_url ?>" class="nav-link">Chemolex Home</a>
+            <a href="<?php echo home_url ?>" class="nav-link">Toolkit Africa Home</a>
             <!-- Exit icon -->
               <i class="fas fa-sign-out-alt"></i>
           </li>
