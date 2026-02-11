@@ -92,7 +92,7 @@ if (!$result) {
             <thead>
               <tr>
                 <th>#</th>
-                <th>Service</th>
+                <th>Course</th>
                 <th>Customer Name</th>
                 <th>Phone</th>
                 <th>Email</th>

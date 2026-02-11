@@ -39,7 +39,7 @@ if(isset($_POST['submit'])) {
         if($lastInsertId) {
             $error = "Something went wrong. Please try again";
         } else {
-            $msg = "Service Manager Registration Was Successfully";
+            $msg = "Course Manager Registration Was Successfully";
         }
     } else {
         $error = "Database connection failed"; 
@@ -54,7 +54,7 @@ if(isset($_POST['submit'])) {
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Service Manager Registration </title>
+        <title>Course Manager Registration </title>
         <link rel="stylesheet" href="css/bootstrap.min.css" media="screen" >
         <link rel="stylesheet" href="css/font-awesome.min.css" media="screen" >
         <link rel="stylesheet" href="css/animate-css/animate.min.css" media="screen" >
@@ -82,7 +82,7 @@ if(isset($_POST['submit'])) {
                      <div class="container-fluid">
                             <div class="row page-title-div">
                                 <div class="col-md-6">
-                                    <h3 class="title text-center"><font color="maroon"><b>Service Manager Account Registration</b></font></h3>
+                                    <h3 class="title text-center"><font color="maroon"><b>Course Manager Account Registration</b></font></h3>
                                 
                                 </div>
                                 

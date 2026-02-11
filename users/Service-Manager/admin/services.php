@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h4>
-        Service Manager
+        Course Manager
       </h4>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>

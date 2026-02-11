@@ -84,7 +84,7 @@ $result = $stmt->get_result();
                                 <th>Email</th>
                                 <th>Phone</th>
                                 <th>Address</th>
-                                <th>Service</th>
+                                <th>Course</th>
                                 <th>Recycler</th>
                                 <th>Status</th>
                             </tr>

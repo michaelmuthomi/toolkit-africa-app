@@ -12,7 +12,7 @@
   
   	<div class="login-box-body">
 	  <div class="login-logo">
-	  <center><b><h3>Service Manager Login</h3></b></center>
+	  <center><b><h3>Course Manager Login</h3></b></center>
   	</div>
 	  <center><img src="../../img/logo2.jpg" alt="user" style="width:70%;height:30%;"></center>
     	<form action="login.php" method="POST">

@@ -100,7 +100,7 @@ session_start();
 
                                     <div class="form-group">
                                         <a class="btn btn-default  btn-block"
-                                            href="Service-Manager/admin/index.php"><b>Service Manager</b></a>
+                                            href="Service-Manager/admin/index.php"><b>Course Manager</b></a>
                                         </a>
                                     </div>
 

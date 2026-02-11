@@ -68,7 +68,7 @@ include 'includes/dbcon.php'; // Assuming this file initializes $pdo
                                             <th>#</th>
                                             <th>Name</th>
                                             <th>Email</th>
-                                            <th>Service</th>
+                                            <th>Course</th>
                                             <th>Charges</th>
                                             <th>Transaction Code</th>
                                             <th>Date</th>

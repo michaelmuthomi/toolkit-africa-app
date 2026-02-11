@@ -47,13 +47,13 @@
 
       <!-- Dashboard Widgets (Service Management Overview) -->
       <div class="row">
-        <!-- Pending Service Requests -->
+        <!-- Pending Course Requests -->
         <div class="col-lg-4 col-xs-12">
           <div class="small-box bg-yellow">
             <div class="inner">
               <h3>
                 <?php 
-                  // Query for Pending Service Requests
+                  // Query for Pending Course Requests
                   $pendingServicesQuery = "SELECT COUNT(*) AS count FROM booking WHERE supervisor_status = 0";
                   $pendingServicesResult = mysqli_query($conn, $pendingServicesQuery);
                   if (!$pendingServicesResult) {
@@ -62,7 +62,7 @@
                   echo mysqli_fetch_assoc($pendingServicesResult)['count'];
                 ?>
               </h3>
-              <p>Pending Service Requests</p>
+              <p>Pending Course Requests</p>
             </div>
             <div class="icon">
               <i class="fa fa-wrench"></i>
@@ -86,7 +86,7 @@
                   echo mysqli_fetch_assoc($completedServicesResult)['count'];
                 ?>
               </h3>
-              <p>Completed Services</p>
+              <p>Completed Courses</p>
             </div>
             <div class="icon">
               <i class="fa fa-check-circle"></i>
@@ -145,7 +145,7 @@
       data: {
         labels: carray,  // Labels from PHP array
         datasets: [{
-          label: 'Service Performance (Requests)', // Label for the dataset
+          label: 'Course Performance (Requests)', // Label for the dataset
           backgroundColor: 'rgba(60,141,188,0.9)', // Color for bars
           borderColor: 'rgba(60,141,188,0.8)',
           data: varray // Data for the chart

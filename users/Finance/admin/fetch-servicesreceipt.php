@@ -69,7 +69,7 @@ if (isset($_POST['bookingId']) && !empty($_POST['bookingId'])) {
                             </div>
                         </div>
                         <hr style='border: 1px solid #000;'>
-                        <h3>Services</h3>
+                        <h3>Courses</h3>
                         <table border='1' cellpadding='8' cellspacing='0' width='100%' style='border-collapse: collapse;'>
                             <thead>
                                 <tr>

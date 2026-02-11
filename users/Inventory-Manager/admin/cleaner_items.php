@@ -61,7 +61,7 @@ include 'includes/dbcon.php'; // Assuming this file initializes $pdo
                                         <tr>
                                             <th>#</th>
                                             <th>Order ID</th>
-                                            <th>Service</th>
+                                            <th>Course</th>
                                             <th>Product Details</th>
                                             <th>Quantity Requested</th>
                                             <th>Cleaner</th>

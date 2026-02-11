@@ -27,7 +27,7 @@ if (!$result) {
     <?php include 'includes/menubar.php'; ?>
     <div class="content-wrapper">
         <section class="content-header">
-            <h4>Service Manager Panel</h4>
+            <h4>Course Manager Panel</h4>
             <ol class="breadcrumb">
                 <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
                 <li class="active">Dashboard</li>
@@ -68,7 +68,7 @@ if (!$result) {
                                 <th>Email</th>
                                 <th>Phone</th>
                                 <th>Address</th>
-                                <th>Service</th>
+                                <th>Course</th>
                                 <th>Supervisor</th>
                                 <th>Status</th>
                                 <th>Date Allocated</th>

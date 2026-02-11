@@ -37,7 +37,7 @@
       <section class="content-header">
         
         <h4>
-          Service Manager Panel
+          Course Manager Panel
         </h4>
         <ol class="breadcrumb">
           <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -47,7 +47,7 @@
 
       <!-- Main content -->
       <section class="content">
-        <h4>Booked Services</h4>
+        <h4>Booked Courses</h4>
         <hr>
         <div class="row">
           <div class="col-md-6">
@@ -94,7 +94,7 @@
             echo "<th>Email</th>";
             echo "<th>Phone</th>";
             echo "<th>Address</th>";
-            echo "<th>Services</th>";
+            echo "<th>Courses</th>";
             echo "<th>Supervisor</th>";
             echo "<th>Action</th>";
             echo "</tr>";

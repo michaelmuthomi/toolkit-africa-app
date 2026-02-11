@@ -88,7 +88,7 @@ if (isset($_GET['idnumber']) && is_numeric($_GET['idnumber'])) {
                                 <td>' . htmlspecialchars($booking['email']) . '</td>
                             </tr>
                             <tr>
-                                <th>Service</th>
+                                <th>Course</th>
                                 <td>' . htmlspecialchars($booking['service']) . '</td>
                             </tr>
                             <tr>

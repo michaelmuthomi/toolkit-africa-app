@@ -25,7 +25,7 @@ $result = $conn->query($servicequery);
   
   <div class="content-wrapper">
     <section class="content-header">
-      <h4>Service Manager</h4>
+      <h4>Course Manager</h4>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
         <li class="active">Dashboard</li>

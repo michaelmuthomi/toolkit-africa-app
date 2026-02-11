@@ -49,7 +49,7 @@
       <!-- MENU SECTION END-->
       <div class="row pad-botm">
         <div class="col-md-4">
-          <h4><font color="black">THE AVAILABLE SERVICES.</font></h4>
+          <h4><font color="black">THE AVAILABLE COURSES.</font></h4>
         </div>
         <div class="col-md-4">
           <input type="text" id="serviceSearch" class="form-control" placeholder="Search services...">

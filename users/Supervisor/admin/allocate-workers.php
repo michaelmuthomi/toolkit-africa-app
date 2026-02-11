@@ -95,7 +95,7 @@ $result = mysqli_query($conn, $query);
             echo "<th>Email</th>";
             echo "<th>Phone</th>";
             echo "<th>Address</th>";
-            echo "<th>Services</th>";
+            echo "<th>Courses</th>";
             echo "<th>Supervisor</th>";
             echo "<th>Status</th>";
             echo "<th>Action</th>";

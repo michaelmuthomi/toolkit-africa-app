@@ -58,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                      VALUES ('{$customer['fname']}', '{$customer['lname']}', '{$customer['phone']}', '{$customer['email']}','$service_id', '$rating', '$feedback')";
     
     if (mysqli_query($conn, $insert_query)) {
-        $_SESSION['success'] = "Thank you for rating our services. Your feedback is really important to us to be better. ";
+        $_SESSION['success'] = "Thank you for rating our courses. Your feedback is really important to us to be better. ";
     } else {
         $_SESSION['error'] = "Error submitting rating.";
     }
@@ -115,14 +115,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="col-md-8">
               <div class="card bg-white shadow-sm border-primary">
                 <div class="card-header bg-primary text-white">
-                  <h5 class="card-title mb-0">Rate a Service</h5>
+                  <h5 class="card-title mb-0">Rate a Course</h5>
                 </div>
                 <div class="card-body">
                   <form action="" method="POST">
                     <div class="form-group">
-                      <label for="service">Select a service:</label>
+                      <label for="service">Select a Course:</label>
                       <select id="service" name="service_id" class="form-control" required>
-                        <option value="">-- Select a Service --</option>
+                        <option value="">-- Select a Course --</option>
                         <?php while ($service = mysqli_fetch_assoc($result)) : ?>
                           <option value="<?php echo $service['service_name']; ?>">
                             <?php echo htmlspecialchars($service['service_name']); ?>

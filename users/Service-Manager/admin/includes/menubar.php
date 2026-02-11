@@ -7,11 +7,11 @@
     <ul class="sidebar-menu" data-widget="tree">
       <li class="header">REPORTS</li>
       <li class=""><a href="home.php"><i class="glyphicon glyphicon-globe"></i> <span>Dashboard</span></a></li>
-      <li class=""><a href="manage_services.php"><i class="fa fa-calendar"></i> <span>Manage Services</span></a></li> 
-      <li class=""><a href="services.php"><i class="fa fa-calendar"></i> <span>Add Services</span></a></li>
-      <li class=""><a href="booked-services.php"><i class="fa fa-users"></i> <span>Booked Services</span></a></li>
+      <li class=""><a href="manage_services.php"><i class="fa fa-calendar"></i> <span>Manage Courses</span></a></li> 
+      <li class=""><a href="services.php"><i class="fa fa-calendar"></i> <span>Add Courses</span></a></li>
+      <li class=""><a href="booked-services.php"><i class="fa fa-users"></i> <span>Booked Courses</span></a></li>
       <li class=""><a href="manage-booked_services.php"><i class="fa fa-users"></i> <span>Manage Booked Services</span></a></li>
-      <li class=""><a href="completed services.php"><i class="fa fa-users"></i> <span>Completed Services</span></a></li>
+      <li class=""><a href="completed services.php"><i class="fa fa-users"></i> <span>Completed Courses</span></a></li>
       <!--<li class=""><a href="votes.php"><i class="fa fa-refresh"></i> <span>Reset Ballot</span></a></li> 
       <li class=""><a href="resultsupdates.php"><i class="fa fa-tasks"></i> <span>Tournament Results</span></a></li> 
       <li class=""><a href="manage_winners.php"><i class="fa fa-plus"></i><span>Manage Winners</span></a></li>
