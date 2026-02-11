@@ -24,7 +24,14 @@ if (!isset($_SESSION['admin'])) {
     exit();
 }
 
-$currentUserFname = $_SESSION['admin']; // Get current user's fname from session
+// $currentUserFname = $_SESSION['admin']; // Get current user's fname from session
+// Fix: Use fname from the $user array populated by session.php (since $_SESSION['admin'] is idnumber)
+if (isset($user) && isset($user['fname'])) {
+  $currentUserFname = $user['fname'];
+} else {
+  // Fallback or handle error if user is not found in session.php check
+  $currentUserFname = '';
+}
 
 // Define the tables and their corresponding roles
 $tables = [
