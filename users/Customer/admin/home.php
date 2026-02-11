@@ -58,8 +58,8 @@
             <span class="info-box-icon bg-green"><i class="glyphicon glyphicon-list"></i></span>
             <div class="info-box-content">
               <a href="services.php" class="info-box-link">
-                <span class="info-box-text">Services</span>
-                <span class="info-box-number">View available services</span>
+                <span class="info-box-text">Courses</span>
+                <span class="info-box-number">View available courses</span>
               </a>
             </div>
           </div>
@@ -70,8 +70,8 @@
             <span class="info-box-icon bg-yellow"><i class="glyphicon glyphicon-bitcoin"></i></span>
             <div class="info-box-content">
               <a href="pay.php" class="info-box-link">
-                <span class="info-box-text">Service Payments</span>
-                <span class="info-box-number">My Services Payments</span>
+                <span class="info-box-text">Course Payments</span>
+                <span class="info-box-number">My Course Payments</span>
               </a>
             </div>
           </div>
@@ -108,8 +108,8 @@
             <span class="info-box-icon bg-navy"><i class="glyphicon glyphicon-folder-close"></i></span>
             <div class="info-box-content">
               <a href="my-services.php" class="info-box-link">
-                <span class="info-box-text">My Services</span>
-                <span class="info-box-number">Manage your services</span>
+                <span class="info-box-text">My Courses</span>
+                <span class="info-box-number">Manage your courses</span>
               </a>
             </div>
           </div>
@@ -133,7 +133,7 @@
             <div class="info-box-content">
               <a href="ratings.php" class="info-box-link">
                 <span class="info-box-text">Ratings</span>
-                <span class="info-box-number">Rate Our Services</span>
+                <span class="info-box-number">Rate Our Courses</span>
               </a>
             </div>
           </div>

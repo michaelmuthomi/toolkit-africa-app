@@ -140,7 +140,7 @@ $error="Something went wrong. Please try again";
                             <label>Recipient :</label>
 <select name="recepient">
     <option >Select Recipient</opttion>
-    <option value="service manager">Service Manager</opttion>
+    <option value="service manager">Course Manager</opttion>
     <option value="finance" >Finance</opttion>
     <option ></opttion>
 </select>

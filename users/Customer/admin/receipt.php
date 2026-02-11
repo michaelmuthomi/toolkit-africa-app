@@ -39,7 +39,7 @@ if (!isset($_SESSION['admin'])) {
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Service Details</th>
+                                <th>Course Details</th>
                                 <th>Payment Details</th>
                             </tr>
                         </thead>
@@ -60,7 +60,7 @@ if (!isset($_SESSION['admin'])) {
                                             <b>Customer Name: </b><?php echo $row['fname'] . ' ' . $row['lname']; ?><br>
                                             <b>Email Address :</b><?php echo $row['email']; ?><br>
                                             <b>Phone Number :</b><?php echo $row['phone']; ?><br><br>
-                                            <b>Service Name :</b><?php echo $row['service']; ?><br>
+                                            <b>Course Name :</b><?php echo $row['service']; ?><br>
                                             <b>Date Registered :</b><?php echo $row['date']; ?><br>
                                            
                                             <?php

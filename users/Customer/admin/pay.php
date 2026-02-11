@@ -64,7 +64,7 @@ if(isset($_SESSION['success'])){
                                             <th>#</th>
                                             <th>Name</th>
                                             <th>Email</th> 
-                                            <th>Service</th> 
+                                            <th>Course</th> 
                                             <th>Charges</th> 
                                             <th>Date</th>  
                                             <th>Status</th>

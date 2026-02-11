@@ -52,7 +52,7 @@ if (!$result) {
             <section class="content">
                 <div class="row">
                     <div class="col-md-12">
-                        <h2>My Services</h2>
+                        <h2>My Courses</h2>
 
                         <?php
                         if(isset($_SESSION['error'])){

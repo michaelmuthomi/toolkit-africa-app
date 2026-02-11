@@ -182,14 +182,14 @@ if (isset($_POST['send'])) {
                     </div>
                     <div class="form-group row mb-3">
                         <div class="col-xl-6">
-                            <label>Select Service</label>
+                            <label>Select Course</label>
                             <?php
                             $qry = "SELECT * FROM services WHERE status='1'";
                             $result = $conn->query($qry);
                             $num = $result->num_rows;
                             if ($num > 0) {
                                 echo '<select required name="service" onchange="classArmDropdown(this.value)" class="form-control mb-1">';
-                                echo '<option value="">--Select Service--</option>';
+                                echo '<option value="">--Select Course--</option>';
                                 while ($rows = $result->fetch_assoc()) {
                                     echo '<option value="' . $rows['service_name'] . '">' . $rows['service_name'] . '-->(' . $rows['duration'] . ')</option>';
                                 }
