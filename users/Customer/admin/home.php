@@ -41,7 +41,7 @@
       ?>
       <!-- Info boxes -->
       <div class="row">
-        <div class="col-md-3 col-sm-6 col-xs-12">
+        <!-- <div class="col-md-3 col-sm-6 col-xs-12">
           <div class="info-box">
             <span class="info-box-icon bg-aqua"><i class="glyphicon glyphicon-shopping-cart"></i></span>
             <div class="info-box-content">
@@ -51,7 +51,7 @@
               </a>
             </div>
           </div>
-        </div>
+        </div> -->
 
         <div class="col-md-3 col-sm-6 col-xs-12">
           <div class="info-box">
@@ -77,7 +77,7 @@
           </div>
         </div>
 
-        <div class="col-md-3 col-sm-6 col-xs-12">
+        <!-- <div class="col-md-3 col-sm-6 col-xs-12">
           <div class="info-box">
             <span class="info-box-icon bg-red"><i class="glyphicon glyphicon-barcode"></i></span>
             <div class="info-box-content">
@@ -87,12 +87,12 @@
               </a>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
 
       <div class="row">
         <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="info-box">
+          <!-- <div class="info-box">
             <span class="info-box-icon bg-purple"><i class="glyphicon glyphicon-gift"></i></span>
             <div class="info-box-content">
               <a href="confirm-deliveries.php" class="info-box-link">
@@ -100,7 +100,7 @@
                 <span class="info-box-number">Confirm deliveries</span>
               </a>
             </div>
-          </div>
+          </div> -->
         </div>
 
         <div class="col-md-3 col-sm-6 col-xs-12">
