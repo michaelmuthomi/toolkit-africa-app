@@ -62,7 +62,7 @@ $result = $conn->query($servicequery);
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="h3 mb-4 text-gray-800">
-                    <i class="fas fa-users"></i> Manage Services
+                    <i class="fas fa-users"></i> Manage Courses
                     <hr>
                 </h1>
             </div>
@@ -71,11 +71,11 @@ $result = $conn->query($servicequery);
         <div class="row">
             <div class="col-lg-12">
                 <?php if (isset($_GET['status']) && $_GET['status'] === 'success'): ?>
-                <div class="alert alert-success">Service action completed successfully!</div>
+                <div class="alert alert-success">Course action completed successfully!</div>
                 <?php endif; ?>
                 <div class="card shadow mb-4">
                     <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-primary">Service List</h6>
+                        <h6 class="m-0 font-weight-bold text-primary">Course List</h6>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -83,7 +83,7 @@ $result = $conn->query($servicequery);
                                 <thead>
                                     <tr>
                                         <th>No</th>
-                                        <th>Service Name</th>
+                                        <th>Course Name</th>
                                         <th>Description</th>
                                         <th>Price</th>
                                         <th>Last Updated</th>
@@ -125,7 +125,7 @@ $result = $conn->query($servicequery);
                                             $counter++;
                                         }
                                     } else {
-                                        echo "<tr><td colspan='6'>No services found.</td></tr>";
+                                        echo "<tr><td colspan='6'>No courses found.</td></tr>";
                                     }
                                     ?>
                                 </tbody>
@@ -145,7 +145,7 @@ $result = $conn->query($servicequery);
       <div class="modal-dialog" role="document">
           <div class="modal-content">
               <div class="modal-header">
-                  <h5 class="modal-title" id="editCustomerModalLabel">Edit Service</h5>
+                  <h5 class="modal-title" id="editCustomerModalLabel">Edit Course</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                   </button>
@@ -154,7 +154,7 @@ $result = $conn->query($servicequery);
                   <form id="editCustomerForm" action="update_service.php" method="post">
                       <input type="hidden" id="edit-id" name="id">
                       <div class="form-group">
-                          <label for="edit-name">Service Name:</label>
+                          <label for="edit-name">Course Name:</label>
                           <input type="text" class="form-control" id="edit-name" name="name" required>
                       </div>
                       
@@ -179,7 +179,7 @@ $result = $conn->query($servicequery);
       <div class="modal-dialog" role="document">
           <div class="modal-content">
               <div class="modal-header">
-                  <h5 class="modal-title" id="deleteCustomerModalLabel">Delete Service</h5>
+                  <h5 class="modal-title" id="deleteCustomerModalLabel">Delete Course</h5>
                   <button type="button" class="close" data-dismiss='modal' aria-label='Close'>
                       <span aria-hidden='true'>&times;</span>
                   </button>
@@ -250,3 +250,4 @@ $result = $conn->query($servicequery);
 
 </body>
 </html>
+```

@@ -37,7 +37,7 @@ include 'includes/dbcon.php'; // Assuming this file initializes $pdo
             <section class="content">
                 <div class="container">
                     <div class="col-md-12">
-                        <h4>Confirmed Payments</h4>
+                        <h4>Confirmed Course Payments</h4>
                         <?php
                         if(isset($_SESSION['error'])){
                 echo "

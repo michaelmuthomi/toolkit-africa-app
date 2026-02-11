@@ -7,8 +7,8 @@
     <ul class="sidebar-menu" data-widget="tree">
       <li class="header">REPORTS</li>
       <li class=""><a href="home.php"><i class="glyphicon glyphicon-globe"></i> <span>Dashboard</span></a></li>
-      <li class=""><a href="pending-payments.php"><i class="fa fa-calendar"></i> <span>Pending Booking Pay</span></a></li> 
-      <li class=""><a href="Approved-payments.php"><i class="fa fa-calendar"></i> <span>Approved Booking Pay</span></a></li> 
+      <li class=""><a href="pending-payments.php"><i class="fa fa-calendar"></i> <span>Pending Course Pay</span></a></li> 
+      <li class=""><a href="Approved-payments.php"><i class="fa fa-calendar"></i> <span>Approved Course Pay</span></a></li> 
       <li class=""><a href="pending-orderpay.php"><i class="fa fa-users"></i> <span>Pending Orders Pay</span></a></li>
       <li class=""><a href="approve-orderpay.php"><i class="fa fa-users"></i> <span>Approved Orders Pay</span></a></li>
       <!--<li class=""><a href="approved-group-participants-l.php"><i class="fa fa-users"></i> <span>Group Contestants</span></a></li>

@@ -25,7 +25,7 @@ $approvedBookings = $pdo->query("SELECT COUNT(*) FROM booking WHERE payment_stat
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-      <h1 style="color:black;">Customer Booking and Order Sales</h1>
+      <h1 style="color:black;">Customer Course and Order Sales</h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
         <li class="active">Dashboard</li>
@@ -64,7 +64,7 @@ $approvedBookings = $pdo->query("SELECT COUNT(*) FROM booking WHERE payment_stat
           <div class="small-box bg-yellow">
             <div class="inner">
               <h3><?php echo $pendingBookings; ?></h3>
-              <p>Pending Booking Payments</p>
+              <p>Pending Course Payments</p>
             </div>
             <div class="icon">
               <i class="fa fa-calendar"></i>
@@ -80,7 +80,7 @@ $approvedBookings = $pdo->query("SELECT COUNT(*) FROM booking WHERE payment_stat
           <div class="small-box bg-green">
             <div class="inner">
               <h3><?php echo $approvedBookings; ?></h3>
-              <p>Approved Booking Payments</p>
+              <p>Approved Course Payments</p>
             </div>
             <div class="icon">
               <i class="fa fa-calendar"></i>
