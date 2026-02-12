@@ -1,0 +1,15 @@
+POST received
+Booking ID: 68, Supervisor: Angela
+Booking found: {"idnumber":12345678,"fname":"Michael","lname":"Muthomi","email":"michael@gmail.com","phone":"0712345678","address":"Nairobi","service":"Solar T1 &amp; T2 Upskilling"}
+POST received
+Booking ID: 68, Supervisor: Angela
+Booking found: {"idnumber":12345678,"fname":"Michael","lname":"Muthomi","email":"michael@gmail.com","phone":"0712345678","address":"Nairobi","service":"Solar T1 &amp; T2 Upskilling"}
+POST received
+Booking ID: 68, Supervisor: Angela
+Booking found: {"idnumber":12345678,"fname":"Michael","lname":"Muthomi","email":"michael@gmail.com","phone":"0712345678","address":"Nairobi","service":"Solar T1 &amp; T2 Upskilling"}
+POST received
+Booking ID: 68, Supervisor: Angela
+Booking found: {"idnumber":12345678,"fname":"Michael","lname":"Muthomi","email":"michael@gmail.com","phone":"0712345678","address":"Nairobi","service":"Solar T1 &amp; T2 Upskilling"}
+POST received
+Booking ID: 68, Supervisor: Angela
+Booking found: {"idnumber":12345678,"fname":"Michael","lname":"Muthomi","email":"michael@gmail.com","phone":"0712345678","address":"Nairobi","service":"Solar T1 &amp; T2 Upskilling"}

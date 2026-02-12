@@ -91,7 +91,7 @@
             <div class="icon">
               <i class="fa fa-check-circle"></i>
             </div>
-            <a href="completed-services.php" class="small-box-footer">View Completed Services <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="completed services.php" class="small-box-footer">View Completed Services <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
 

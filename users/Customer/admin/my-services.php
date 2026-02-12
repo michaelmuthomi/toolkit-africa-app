@@ -90,7 +90,7 @@ if (!$result) {
                                             <th>phone</th>
                                             <th>address</th>
                                             <th>service</th>
-                                            <th>supervisor</th>
+                                            <th>Trainer</th>
                                             <th>Status</th>
                                             <th>Action</th>
                                         </tr>

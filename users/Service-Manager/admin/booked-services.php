@@ -95,7 +95,7 @@
             echo "<th>Phone</th>";
             echo "<th>Address</th>";
             echo "<th>Courses</th>";
-            echo "<th>Supervisor</th>";
+          echo "<th>Trainer Assignment</th>";
             echo "<th>Action</th>";
             echo "</tr>";
             echo "</thead>";
@@ -118,10 +118,8 @@
                     }
               echo '</td>';
               echo "<td>
-                      <form action='' method='post' style='display:inline;'>
-                        <input type='hidden' name='booking_id' value='{$row['booking_id']}'>
-                        <button type='button' class='btn btn-primary allocate-btn' data-toggle='modal' data-target='#allocateModal'>Allocate Supervisor</button>
-                      </form>
+                      <!-- Action removed as per workflow refinement -->
+                      <span class='text-muted'>View Only</span>
                     </td>";
               echo "</tr>";
             }

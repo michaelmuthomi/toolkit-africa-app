@@ -70,7 +70,7 @@ if (!$result) {
                                 <th>Phone</th>
                                 <th>Address</th>
                                 <th>Course</th>
-                                <th>Supervisor</th>
+                                <th>Trainer</th>
                                 <th>Status</th>
                                 <th>Date Allocated</th>
                                 <th>Action</th>
@@ -114,7 +114,7 @@ if (!$result) {
 
                                 // Action button conditionally disabled
                                 $disabled = ($row['status'] == 0 || $row['status'] == 1) ? '' : 'disabled';
-                                echo "<td><button class='btn btn-primary btn-xs' data-toggle='modal' data-target='#modal-change-supervisor' data-id='" . $row['No'] . "' $disabled>Change Supervisor</button></td>";
+                                echo "<td><button class='btn btn-primary btn-xs' data-toggle='modal' data-target='#modal-change-trainer' data-id='" . $row['No'] . "' $disabled>Change Trainer</button></td>";
                                 echo "</tr>";
                             }
                             ?>
@@ -124,30 +124,22 @@ if (!$result) {
             </div>
         </section>
     </div>
-</div>
-</body>
 
-                    </table>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <!-- Modal for changing supervisor -->
-    <div class="modal fade" id="modal-change-supervisor">
+    <!-- Modal for changing trainer -->
+    <div class="modal fade" id="modal-change-trainer">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title">Change Supervisor</h4>
+                    <h4 class="modal-title">Change Trainer</h4>
                 </div>
                 <div class="modal-body">
-                    <form id="form-change-supervisor">
+                    <form id="form-change-trainer">
                         <div class="form-group">
-                            <label for="select-supervisor">Select New Supervisor:</label>
-                            <select class="form-control" id="select-supervisor" name="new_supervisor">
-                                <option value="">Select Supervisor</option>
+                            <label for="select-trainer">Select New Trainer:</label>
+                            <select class="form-control" id="select-trainer" name="new_supervisor">
+                                <option value="">Select Trainer</option>
                                 <?php
                                 // Fetch supervisors from database
                                 $sql_supervisors = "SELECT * FROM supervisor";
@@ -177,14 +169,14 @@ if (!$result) {
         // Initialize DataTables
         $('#example1').DataTable();
 
-        // Handle click on "Change Supervisor" button to fill modal with task ID
-        $('#example1').on('click', 'button[data-target="#modal-change-supervisor"]', function () {
+        // Handle click on "Change Trainer" button to fill modal with task ID
+        $('#example1').on('click', 'button[data-target="#modal-change-trainer"]', function () {
             var task_id = $(this).data('id');
             $('#task_id').val(task_id);
         });
 
-        // Handle form submission for changing supervisor
-        $('#form-change-supervisor').submit(function (event) {
+        // Handle form submission for changing trainer
+        $('#form-change-trainer').submit(function (event) {
             event.preventDefault();
             var formData = $(this).serialize();
             
@@ -198,7 +190,7 @@ if (!$result) {
                 },
                 error: function (xhr, status, error) {
                     console.error(xhr.responseText); // Log error message
-                    alert('An error occurred while updating supervisor.'); // Alert user about error
+                    alert('An error occurred while updating trainer.'); // Alert user about error
                 }
             });
         });

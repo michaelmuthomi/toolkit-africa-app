@@ -15,6 +15,16 @@ $users = $_SESSION['admin'];
 $servicequery = "SELECT service_id, service_name, description, price, last_update, status FROM services";
 $result = $conn->query($servicequery);
 
+// Fetch supervisors for the dropdown
+$supervisorQuery = "SELECT idnumber, fname, lname FROM supervisor";
+$supervisorResult = $conn->query($supervisorQuery);
+$supervisors = [];
+if ($supervisorResult->num_rows > 0) {
+    while ($row = $supervisorResult->fetch_assoc()) {
+        $supervisors[] = $row;
+    }
+}
+
 ?>
 
 <body class="hold-transition skin-blue sidebar-mini">
@@ -119,6 +129,11 @@ $result = $conn->query($servicequery);
                                                         data-name='{$row['service_name']}'>
                                                         <i class='fas fa-trash'></i> Delete
                                                     </button>
+                                                    <button class='btn btn-info btn-sm assign'
+                                                        data-id='{$row['service_id']}'
+                                                        data-name='{$row['service_name']}'>
+                                                        <i class='fas fa-chalkboard-teacher'></i> Assign Trainer
+                                                    </button>
                                                     $status_button
                                                 </td>
                                             </tr>";
@@ -195,6 +210,41 @@ $result = $conn->query($servicequery);
       </div>
   </div>
 
+  <!-- Assign Trainer Modal -->
+  <div class="modal fade" id="assignTeacherModal" tabindex="-1" role="dialog" aria-labelledby="assignTeacherModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="assignTeacherModalLabel">Assign Trainer to Course</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                  <form id="assignTeacherForm" action="assign_teacher.php" method="post">
+                      <input type="hidden" id="assign-id" name="service_id">
+                      <div class="form-group">
+                          <label for="assign-service-name">Course:</label>
+                          <input type="text" class="form-control" id="assign-service-name" readonly>
+                      </div>
+                      <div class="form-group">
+                          <label for="supervisor">Select Trainer:</label>
+                          <select class="form-control" id="supervisor" name="supervisor_id" required>
+                              <option value="">-- Select Trainer --</option>
+                            <?php foreach ($supervisors as $supervisor): ?>
+                                <option value="<?php echo $supervisor['idnumber']; ?>">
+                                    <?php echo $supervisor['fname'] . ' ' . $supervisor['lname']; ?>
+                                </option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Assign to E-Learning</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
   <script>
@@ -223,6 +273,17 @@ $result = $conn->query($servicequery);
           $('#delete-customer-name').text(name);
 
           $('#deleteCustomerModal').modal('show');
+      });
+
+      // Assign Teacher button click handler
+      $('.assign').on('click', function() {
+          const id = $(this).data('id');
+          const name = $(this).data('name');
+
+          $('#assign-id').val(id);
+          $('#assign-service-name').val(name);
+
+          $('#assignTeacherModal').modal('show');
       });
 
       // Status button click handler

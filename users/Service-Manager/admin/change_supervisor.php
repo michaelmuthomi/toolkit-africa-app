@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $new_supervisor = $_POST['new_supervisor'];
     
     if (empty($task_id) || empty($new_supervisor)) {
-        $_SESSION['error'] = "Task ID or New Supervisor is missing.";
+        $_SESSION['error'] = "Task ID or New Trainer is missing.";
         header("Location: manage-booked_services.php");
         exit();
     }
@@ -33,9 +33,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         ) WHERE No = '$task_id'";
         
         if ($conn->query($sql_update) === TRUE) {
-            $_SESSION['success'] = "Supervisor updated successfully.";
+            $_SESSION['success'] = "Trainer updated successfully.";
         } else {
-            $_SESSION['error'] = "Error updating supervisor: " . $conn->error;
+            $_SESSION['error'] = "Error updating trainer: " . $conn->error;
         }
         
         // Redirect back to the page where the change was initiated

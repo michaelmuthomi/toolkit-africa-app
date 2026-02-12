@@ -76,39 +76,26 @@ if (!$result) {
                         </thead>
                         <tbody>
                             <?php
-                            $counter = 1; // For numbering rows
-                            while ($row = $result->fetch_assoc()) {
-                                echo "<tr>";
-                                echo "<td>{$counter}</td>";
-                                echo "<td>{$row['idnumber']}</td>";
-                                echo "<td>{$row['fname']}</td>";
-                                echo "<td>{$row['email']}</td>";
-                                echo "<td>{$row['phone']}</td>";
-                                echo "<td>{$row['address']}</td>";
-                                echo "<td>{$row['service']}</td>";
-                                echo "<td>{$row['supervisor']}</td>"; // Supervisor name
-                                
-                                // Status conversion
-                                switch ($row['status']) {
-                                    case 0:
-                                        $status = 'Pending';
-                                        break;
-                                    case 1:
-                                        $status = 'Work Started';
-                                        break;
-                                    case 2:
-                                        $status = 'Completed - Waiting for Confirmation';
-                                        break;
-                                    case 3:
-                                        $status = 'Customer Confirmed Work Completed';
-                                        break;
-                                    default:
-                                        $status = 'Unknown';
+                            if ($result->num_rows > 0) {
+                                $counter = 1; // For numbering rows
+                                while ($row = $result->fetch_assoc()) {
+                                    echo "<tr>";
+                                    echo "<td>{$counter}</td>";
+                                    echo "<td>{$row['service']}</td>"; // Service name
+                                    echo "<td>N/A</td>"; // Description placeholder
+                                    echo "<td>N/A</td>"; // Price placeholder
+                                    echo "<td>{$row['supervisor_name']}</td>"; // Trainer name (using alias from query)
+                                    echo "<td>{$row['date_allocated']}</td>"; // Date completed
+                                    echo "<td>{$row['cleaner_status']}</td>"; // Comments placeholder (assuming cleaner_status is used for comments)
+                                    echo "<td>N/A</td>"; // Rating placeholder
+                                    echo "<td>
+                                            <button class='btn btn-warning btn-sm' data-toggle='modal' data-target='#modal-change-trainer' data-id='{$row['id']}'>Change Trainer</button>
+                                          </td>";
+                                    echo "</tr>";
+                                    $counter++;
                                 }
-                                echo "<td>{$status}</td>";
-                                echo "<td>{$row['date_allocated']}</td>";
-                                echo "</tr>";
-                                $counter++; // Increment row counter
+                            } else {
+                                echo "<tr><td colspan='9'>No completed services found.</td></tr>";
                             }
                             ?>
                         </tbody>
@@ -121,21 +108,23 @@ if (!$result) {
 </body>
 
 
-    <!-- Modal for changing supervisor -->
-    <div class="modal fade" id="modal-change-supervisor">
+    <!-- Modal for changing trainer -->
+    <div class="modal fade" id="modal-change-trainer">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title">Change Supervisor</h4>
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Change Trainer</h4>
                 </div>
                 <div class="modal-body">
-                    <form id="form-change-supervisor">
+                    <form id="form-change-trainer">
+                        <input type="hidden" name="task_id" id="task-id">
                         <div class="form-group">
-                            <label for="select-supervisor">Select New Supervisor:</label>
-                            <select class="form-control" id="select-supervisor" name="new_supervisor">
-                                <option value="">Select Supervisor</option>
+                            <label for="select-trainer">Select New Trainer:</label>
+                            <select class="form-control" id="select-trainer" name="new_trainer">
+                                <option value="">Select Trainer</option>
                                 <?php
                                 // Fetch supervisors from database
                                 $sql_supervisors = "SELECT * FROM supervisor";
