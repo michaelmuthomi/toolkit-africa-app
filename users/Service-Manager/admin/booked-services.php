@@ -88,44 +88,61 @@
             echo "<table id='bookingTable' class='table table-striped'>";
             echo "<thead>";
             echo "<tr>";
-            echo "<th>ID Number</th>";
-            echo "<th>First Name</th>";
-            echo "<th>Last Name</th>";
-            echo "<th>Email</th>";
-            echo "<th>Phone</th>";
-            echo "<th>Address</th>";
-            echo "<th>Courses</th>";
+          echo "<th>Enroll</th>";
+          echo "<th>E-Learning Status</th>";
+          echo "<th>#</th>";
+          echo "<th>ID Number</th>";
+          echo "<th>Name</th>";
+          echo "<th>Email</th>";
+          echo "<th>Phone</th>";
+          echo "<th>Address</th>";
+          echo "<th>Course</th>";
           echo "<th>Trainer Assignment</th>";
-            echo "<th>Action</th>";
             echo "</tr>";
             echo "</thead>";
             echo "<tbody>";
 
-            while($row = mysqli_fetch_assoc($result)) {
-              echo "<tr>";
-              echo "<td>{$row['idnumber']}</td>";
-              echo "<td>{$row['fname']}</td>";
-              echo "<td>{$row['lname']}</td>";
-              echo "<td>{$row['email']}</td>";
-              echo "<td>{$row['phone']}</td>";
-              echo "<td>{$row['address']}</td>";
-              echo "<td>{$row['service']}</td>";
-              echo '<td>';
+          // Reset result pointer to reuse for display
+          mysqli_data_seek($result, 0);
+
+          while ($row = mysqli_fetch_assoc($result)) {
+            $booking_id = $row['booking_id'];
+            $e_status = $row['enrollment_status'];
+            $enroll_btn_text = ($e_status == 1) ? "Enrolled" : "Enroll Student";
+            $enroll_btn_class = ($e_status == 1) ? "btn-success disabled" : "btn-info";
+            $enroll_btn_disabled = ($e_status == 1) ? "disabled" : "";
+
+            echo "
+                <tr>
+                    <td>
+                        <form action='enroll_student.php' method='POST' style='display:inline;'>
+                            <input type='hidden' name='booking_id' value='$booking_id'>
+                            <button type='submit' class='btn btn-xs $enroll_btn_class' $enroll_btn_disabled>
+                                $enroll_btn_text
+                            </button>
+                        </form>
+                    </td>
+                    <td>" . $row['booking_id'] . "</td>
+                    <td>" . $row['idnumber'] . "</td>
+                    <td>" . $row['fname'] . " " . $row['lname'] . "</td>
+                    <td>" . $row['email'] . "</td>
+                    <td>" . $row['phone'] . "</td>
+                    <td>" . $row['address'] . "</td>
+                    <td>" . $row['service'] . "</td>
+                    <td>";
                     if($row['supervisor_status'] == 0){
-                    echo 'Unallocated';
+              echo "<span class='label label-warning'>Pending</span>";
                     } elseif($row['supervisor_status'] == 1){
-                      echo 'Allocated';
+              echo "<span class='label label-success'>Assigned</span>";
                     }
-              echo '</td>';
-              echo "<td>
-                      <!-- Action removed as per workflow refinement -->
-                      <span class='text-muted'>View Only</span>
-                    </td>";
-              echo "</tr>";
+            echo "</td>
+                </tr>
+                ";
             }
 
             echo "</tbody>";
             echo "</table>";
+          echo '</div>'; // Close table-responsive
           } else {
             echo "<p>No services found.</p>";
           }
