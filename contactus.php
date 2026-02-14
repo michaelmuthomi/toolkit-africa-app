@@ -72,13 +72,13 @@
                     <p class="highlight">Toolkit Africa</p>
 
                     <h5>Address:</h5>
-                    <p class="highlight">Matigari Hse, Ruaraka, Outer Ring Road Nairobi.</p>
+                    <p class="highlight">7219 Karen-Kikuyu Highway</p>
 
                     <h5>Phone:</h5>
-                    <p class="highlight"><a href="tel:+254716009679">+2547 1600 9679</a></p>
+                    <p class="highlight"><a href="tel:+254716009679">+254 709 549 200</a></p>
 
                     <h5>Email:</h5>
-                    <p class="highlight"><a href="mailto:info@toolkitafrica.com">info@toolkitafrica.com</a></p>
+                    <p class="highlight"><a href="mailto:office@toolkitafrica.ac.ke">office@toolkitafrica.ac.ke</a></p>
 
                     <h5>Office Hours:</h5>
                     <p class="highlight">Weekdays : 8AM to 5PM</p>
